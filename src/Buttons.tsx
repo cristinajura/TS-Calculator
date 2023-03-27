@@ -1,12 +1,5 @@
-import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faS,
-  faBackspace
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add(faS, faBackspace);
+import React from "react";
+import { FaBackspace } from "react-icons/fa";
 
 const Buttons = (props: any) => {
   return (
@@ -34,8 +27,12 @@ const Buttons = (props: any) => {
       >
         x
       </button>
-      <button id="erase" style={{ background: "#578" }} onClick={props.erase}>
-         <FontAwesomeIcon icon={faBackspace} />
+      <button
+        id="erase"
+        style={{ background: "#578", fontSize: "22px" }}
+        onClick={props.erase}
+      >
+        <FaBackspace />
       </button>
       <button id="seven" onClick={props.updateDisplay} value="7">
         7
